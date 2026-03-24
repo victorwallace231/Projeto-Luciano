@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital@0;1&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --font-family: "Poppins", sans-serif;
+    --azul-escuro: #26348B;
+    --azul-claro:#3CA4DC;
+    --destaque: 800;
+    --cor-botao: #0056b3;
+    --cor-botao-hover:#004494;
+    --font-color: #1D1D1B;
+    --white-font: #ffff;
+    --titulo-grande: 800 64px "Poppins" , sans-serif;
+    --titulo-medio: 600 36px "Poppins" , sans-serif;
+    --titulo-pequeno:500 24px "Poppins", sans-serif;
+}
+a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 50px;
+    color: var(--white-font);
+    padding: 15px;
+    background-color: var(--cor-botao);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform:scale(1.05);
+    font-weight:600 ;
+    font-family: var(--font-family);
+    animation-delay: 1s;
+}
+a:hover{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    color: var(--white-font);
+    padding: 15px;
+    background-color: var(--cor-botao-hover);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    font-weight:600 ;
+    font-family: var(--font-family);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.font-azul-escuro{
+    color: var(--azul-escuro);
+}
+.font-azul-claro{
+    color: var(--azul-claro);
+}
+.font-branca{
+    color: var(--white-font);
+}
+.titulo-grande{
+    font: var(--titulo-grande);
+    letter-spacing: 2px;
+    padding-bottom: 40px;
+    line-height: 1.1;
+    max-width: 500px;
+    animation-delay: 0.2s;
+}
+.titulo-medio{
+    font: var(--titulo-medio);
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+}
+.titulo-medio:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+.titulo-medio:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.titulo-pequeno{
+    font: var(--titulo-pequeno);
+    letter-spacing: 0.5px;
+    padding-bottom: 40px;
+    animation-delay: 0.8s;
+}
+.destaque{
+    font-weight: var(--destaque);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeLeft 0.8s ease forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
