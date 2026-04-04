@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
 
@@ -9,7 +10,6 @@
 }
 
 :root{
-    --font-family: "Poppins", sans-serif;
     --azul-escuro: #26348B;
     --azul-claro:#3CA4DC;
     --destaque: 800;
@@ -18,8 +18,9 @@
     --font-color: #1D1D1B;
     --white-font: #ffff;
     --titulo-grande: 800 64px "Poppins" , sans-serif;
-    --titulo-medio: 600 36px "Poppins" , sans-serif;
+    --titulo-medio: 700 36px "Poppins" , sans-serif;
     --titulo-pequeno:500 24px "Poppins", sans-serif;
+    --font-prg: 400 16px "Inter", sans-serif; 
 }
 a{
     display: inline-flex;
@@ -55,6 +56,7 @@ a:hover{
 body{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 .font-azul-escuro{
     color: var(--azul-escuro);
@@ -95,7 +97,7 @@ body{
     font-weight: var(--destaque);
 }
 
-.fade-left {
+.fade-left {/*animação simples pros titulos*/
   opacity: 0;
   transform: translateY(20px);
   animation: fadeLeft 0.8s ease forwards;
@@ -106,4 +108,12 @@ body{
     opacity: 1;
     transform: translateY(0px);
   }
+}
+.prg{
+    font: var(--font-prg); /*texto simples*/
+}
+.img-section{   /*imagem da sessão principal da primeira pagina*/
+    width: 700px;   
+    height: 500px;
+    border-radius: 20px;  
 }

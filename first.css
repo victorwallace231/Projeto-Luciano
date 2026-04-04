@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 100%;
-    max-height: 100%;
     width: 100vw;
     height: 100vh;
     background-image: 
@@ -14,5 +12,88 @@
     background-position: bottom;
     padding-left: 100px;
 }
+.main{
+    margin-top: 30px;
 
+    section{
+        display:flex;
+        margin-top: 60px;
+        margin-left: 50px;
+        gap: 80px ; 
 
+        #sessao:nth-of-type(2){
+            width: 900px;
+            .destaque{ /* criei essa class com o objetivo de editar somente parte do txt*/ 
+                color: var(--azul-escuro);
+                position: relative;
+            }
+            
+            .destaque::after{ /* pra fazer o detalhe da barra azul em baixo*/
+                content: "";
+                display: block;
+                width: 80px;
+                height: 5px;
+                background: var(--azul-escuro);
+                margin: 8px;
+            }
+            .titulo-medio{
+                font-size: 48px ;
+                padding-bottom: 0px; /* fiz isso pq a class titulo medio tem 40px de bottom*/
+            }
+        }
+    }  
+}
+.txt-detalhe{
+    font: 500 18px "Poppins", sans-serif;
+    color: var(--azul-escuro);
+    position: relative;
+    letter-spacing: 3px;
+}
+.txt-detalhe::after{ 
+    content: "";
+  display: block;
+  width: 60px; /* AQUI tu controla o tamanho */
+  height: 3px; /* espessura */
+  background: var(--azul-escuro);
+  margin-top: 8px;
+}
+
+.icone-box { /* criando as imagems/icones do cartão*/
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-box svg { /*tamanho e cor do ico*/
+  width: 28px;
+  height: 28px;
+  stroke: var(--azul-escuro);
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: solid 1px var(--azul-escuro);
+    padding-right:40px;
+    padding-left: 40px;
+    .prg{
+        font-size: 20px;
+    }
+    .prg:nth-of-type(2){ /*Organizando o texto dentro do cartão*/
+        font-size: 12px;
+        width: 150px;
+    }
+}
+.card:last-child{ /*Tirando a borda do ultimo cartão*/
+    border: none;
+}
+#cartoes{/*Id criada pra diferenciar da sessao anterior*/
+    gap: 0;
+    margin-left: -40px;
+    margin-top: 25px;
+}
