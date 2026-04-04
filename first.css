@@ -73,7 +73,7 @@
   height: 28px;
   stroke: var(--azul-escuro);
 }
-.card{
+.cardp{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@
 .card:last-child{ /*Tirando a borda do ultimo cartão*/
     border: none;
 }
-#cartoes{/*Id criada pra diferenciar da sessao anterior*/
+#cartoesp{/*Id criada pra diferenciar da sessao anterior*/
     gap: 0;
     margin-left: -40px;
     margin-top: 25px;
