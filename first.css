@@ -14,7 +14,6 @@
 }
 .principal{
     margin-top: 30px;
-    border: solid;
 
     section{
         display:flex;
@@ -102,26 +101,118 @@
 }
 #final{
         display:flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
         background-color: rgba(60, 164, 220, 0.1);;
-        section{
-            width: 100%;
-            height: 50vh;
-            .destaque{ /* criei essa class com o objetivo de editar somente parte do txt*/ 
-                color: var(--azul-escuro);
-                position: relative;
-            }
-            
-            .destaque::after{ /* pra fazer o detalhe da barra azul em baixo*/
-                content: "";
-                display: block;
-                width: 80px;
-                height: 5px;
-                background: var(--azul-escuro);
-                margin: 8px;
-            }
-            .titulo-medio{
-                font-size: 48px ;
-                padding-bottom: 0px; /* fiz isso pq a class titulo medio tem 40px de bottom*/
-            }
+        margin-top: 50px;
+        /*Titulo da parte final*/
+        .secao-titulo {
+            text-align: center;
         }
+        .subtitulo {
+            color: #3b5bdb;
+            font: var(--titulo-pequeno);
+        }
+        .linha {
+            width: 60px;
+            height: 4px;
+            background: #3b5bdb;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .titulo-medio{
+            padding-bottom: 0;
+        }
+        /*Titulo termina aqui*/
+
+        .cartoes{ /* Cartões medios da parte final*/
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            width: 1200px;
+        }     
+}
+.cartao{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    background-color: var(--white-font);
+    border-radius: 5px;
+    gap: 8px;
+    padding-top: 15px;
+    padding-left: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    .prg:nth-of-type(1){
+        font-weight: 800;
+        font-size: 18px;
+    }
+    .prg:nth-of-type(2){
+        font-size: 12px;
+        color: rgb(105, 105, 105);
+    }
+}
+
+.cartoes2{ /**/
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            width: 1400px;
+            height: 125px;
+            border-radius: 40px;
+            background-color: var(--azul-escuro);
+            .icone-boxg{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-right: 20px;
+            }
+            .icone-boxg svg {
+                width: 50px;
+                height: 50px;
+                stroke: var(--white-font);
+            }
+            .prg{
+                color: var(--white-font);
+                font-weight: 200;
+                font-size: 15px;
+            }
+            .titulo-pequeno{
+                color: var(--white-font);
+                font-size: 20px;
+                font-weight: 600;
+                padding-bottom: 0;
+            }
+            span{
+                display: block;
+                width: 190px;
+                padding-right: 24px;
+                border-right: solid 1px var(--white-font);
+            }
+            .cardp{
+                display: flex;
+                flex-direction: row;
+                padding-left: 30px;/*alinhamento chato pra caramba*/
+                padding-right: 30px;
+                margin-left: -140px;
+            }
+            .cardp:nth-child(1){
+                margin: 0;
+            }
+            .cardp:last-child{
+                span{
+                    border: none;
+                    margin-right: -40px;/* alinhando no final pra ficar exatamente no centro*/
+                    .prg{
+                        font-size: 13px;
+                    }
+                }
+            }
+            margin-bottom: 100px;
 }
