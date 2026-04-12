@@ -60,21 +60,7 @@
   margin-top: 8px;
 }
 
-.icone-box { /* criando as imagems/icones do cartão*/
-  width: 60px;
-  height: 60px;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.icone-box svg { /*tamanho e cor do ico*/
-  width: 28px;
-  height: 28px;
-  stroke: var(--azul-escuro);
-}
 .cardp{
     display: flex;
     align-items: center;
@@ -160,24 +146,10 @@
             align-items: center;
             align-content: center;
             justify-content: space-around;
-            width: 1400px;
+            width: 87.5rem;
             height: 125px;
             border-radius: 40px;
             background-color: var(--azul-escuro);
-            .icone-boxg{
-                width: 50px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: row;
-                margin-right: 20px;
-            }
-            .icone-boxg svg {
-                width: 50px;
-                height: 50px;
-                stroke: var(--white-font);
-            }
             .prg{
                 color: var(--white-font);
                 font-weight: 200;
@@ -215,4 +187,231 @@
                 }
             }
             margin-bottom: 100px;
+}
+
+/* ============================================
+   RESPONSIVIDADE first.css — TABLET (até 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+
+    #hero {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .principal section {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 30px;
+    }
+
+    .principal section #sessao:nth-of-type(2) {
+        width: 100%;
+    }
+
+    .principal section #sessao:nth-of-type(2) .titulo-medio {
+        font-size: 32px;
+    }
+
+    #cartoesp {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .cardp {
+        border-right: none;
+        border-bottom: solid 1px rgba(38,52,139,0.2);
+        padding-bottom: 20px;
+    }
+
+    #final .cartoes {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .cartao {
+        width: 45%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .cartoes2 {
+        width: 95%;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 24px 20px;
+        gap: 16px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .cartoes2 .cardp {
+        flex-direction: row;
+        border-bottom: none;
+        border-right: solid 1px var(--white-font);
+        padding: 10px 20px;
+        margin-left: 0 !important;
+    }
+
+    .cartoes2 .cardp:last-child {
+        border-right: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE first.css — MOBILE (até 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Hero centralizado e com padding correto */
+    #hero {
+        padding: 80px 20px 40px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Seção principal centralizada */
+    .principal {
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .principal section {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        padding: 0 20px;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .principal section #sessao:nth-of-type(2) {
+        width: 100%;
+        text-align: center;
+    }
+
+    .principal section #sessao:nth-of-type(2) .titulo-medio {
+        font-size: 20px;
+    }
+
+    .txt-detalhe {
+        text-align: center;
+    }
+
+    .txt-detalhe::after {
+        margin: 8px auto 0;
+    }
+
+    /* Cards pequenos em grid 2 colunas */
+    #cartoesp {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-left: 0;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    .cardp {
+        border: solid 1px rgba(38, 52, 139, 0.2);
+        border-radius: 10px;
+        padding: 12px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardp:last-child {
+        border: solid 1px rgba(38, 52, 139, 0.2);
+    }
+
+    .cardp .prg {
+        font-size: 12px !important;
+        width: auto !important;
+    }
+
+    /* Seção de diferenciais centralizada */
+    #final {
+        padding: 30px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #final .cartoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    /* Barra de estatísticas */
+    .cartoes2 {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 16px;
+        gap: 0;
+        border-radius: 14px;
+        align-items: stretch;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+    }
+
+    .cartoes2 .cardp {
+        flex-direction: row;
+        border: none;
+        border-bottom: solid 1px rgba(255,255,255,0.2);
+        padding: 12px 8px;
+        margin-left: 0 !important;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        border-radius: 0;
+    }
+
+    .cartoes2 .cardp:last-child {
+        border-bottom: none;
+    }
+
+    .cartoes2 span {
+        border-right: none !important;
+        margin-right: 0 !important;
+        width: auto;
+        padding-right: 0;
+    }
+
+    .cartoes2 .icone-boxg {
+        margin-right: 14px;
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+    }
+
+    .cartoes2 .icone-boxg svg {
+        width: 28px;
+        height: 28px;
+    }
 }

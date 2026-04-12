@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <nav class="nav">
+        <img src="/icones/Marca-FLF-2022-Todo-Branco.png" alt="Logo Luciano Feijão">
+        <span>
+            <a href="" class="bntnav ativo">Inicio</a>
+            <a href="" class="bntnav">Cursos</a>
+            <a href="" class="bntnav">Sobre</a>
+            <a href="" class="bntnav">Contato</a>
+            <a href="" class="bntnav">Area do aluno</a>
+        </span>    
+        <a href="" class="bntlogin">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </button>
+    </nav>
+    <main>
+        
+    </main>
+    <div class="nav-mobile" id="nav-mobile">
+        <a href="">Inicio</a>
+        <a href="">Cursos</a>
+        <a href="">Sobre</a>
+        <a href="">Contato</a>
+        <a href="">Area do aluno</a>
+        <a href="" class="bntlogin-mobile">Login</a>
+    </div>
+    <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMobile = document.getElementById('nav-mobile');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('aberto');
+                navMobile.classList.toggle('aberto');
+            });
+
+            navMobile.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('aberto');
+                    navMobile.classList.remove('aberto');
+                });
+            });
+    </script>
 </body>
 </html>
