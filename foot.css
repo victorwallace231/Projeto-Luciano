@@ -1,0 +1,137 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    height: 50%;   
+    width: 100%;
+    background-color: #1E4FA3;
+    .titulo-pequeno{
+        padding-bottom: -10px;
+        margin-bottom: -10px;
+        font-weight: 600;
+        font-size: 32px;
+    }
+    p{
+        color: var(--white-font);
+    }
+    .rodape{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 60%;
+        background-color: #0F2E6D;
+        gap: 32px;
+        div:nth-child(1){
+            display: flex;
+        }
+    }
+    .rodapefinal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 20%;
+        background-color: var(--azul-escuro);
+        p{
+            color: aliceblue;
+        }
+    }
+    #informacoes{
+        display: flex;
+        width: auto;
+        height: auto;
+        margin-left: 100px;
+        span{
+            display: flex;
+            flex-direction: column;
+            border-right:solid 1px var(--white-font);
+            padding: 0 30px;
+            a{
+                text-decoration: none;
+                color: var(--white-font);
+            }
+            a:hover{
+                color: var(--azul-claro);
+            }
+        }
+        span:nth-of-type(3){
+            border-right: none;
+        }
+}   
+}
+/* ============================================
+   RESPONSIVIDADE FOOTER — TABLET (até 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    footer .rodape {
+        width: 90%;
+        gap: 20px;
+        padding: 20px;
+    }
+    footer #informacoes {
+        margin-left: 40px;
+    }
+    footer #informacoes span {
+        padding: 0 20px;
+    }
+    footer .rodapefinal {
+        width: 90%;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE FOOTER — MOBILE (até 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        padding: 0 0 20px 0;
+    }
+    footer .rodape {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        gap: 24px;
+        text-align: center;
+    }
+    footer .rodape div:nth-child(1) {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    footer .icone-boxG {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    footer .titulo-pequeno {
+        text-align: center;
+    }
+    footer #informacoes {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+    }
+    footer #informacoes span {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 16px 0;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    footer #informacoes span:nth-of-type(3) {
+        border-bottom: none;
+    }
+    footer .rodapefinal {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        height: auto;
+    }
+}

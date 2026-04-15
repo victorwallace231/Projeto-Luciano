@@ -1,0 +1,204 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS E MAIN
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 65px;
+    background-color: #f9f9f9; /* Um fundo leve ajuda a destacar os cards brancos */
+    .titulo-pequeno{
+    color: var(--azul-escuro);
+    }
+}
+
+main .titulo-medio {
+    padding-top: 40px;
+    margin-bottom: 20px;
+    color: var(--azul-escuro);
+    font-size: 28px; 
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+
+/* =========================================
+   ESTRUTURA DO CARROSSEL (RESOLVE O CORTE)
+   ========================================= */
+.meu-carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 50px; /* Espaço lateral para os botões não ficarem sobre os cards */
+}
+
+/* Container que faz o "clipping" (corte) dos slides */
+.carrossel-overflow {
+    overflow: hidden;
+    padding: 15px 5px; /* Padding para a sombra do card não ser cortada em cima/baixo */
+}
+
+/* Trilha que carrega os cards */
+.carrossel-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s ease-out;
+}
+
+/* =========================================
+   BOTÕES DE NAVEGAÇÃO
+   ========================================= */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--azul-claro);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* =========================================
+   CARD DE CURSO
+   ========================================= */
+.cardcurso {
+    flex-shrink: 0;
+    /* Calcula largura para 3 itens menos o gap */
+    flex-basis: calc((100% - 48px) / 3); 
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    overflow: hidden; /* Garante que a imagem respeite o border-radius */
+}
+
+.cardcurso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cardcurso .titulo-pequeno {
+    font-size: 18px; /* Reduzido para não quebrar layout */
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin: 15px 15px 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardcurso .prg {
+    font-size: 14px;
+    color: #555;
+    margin: 0 15px 8px 15px;
+    line-height: 1.4;
+}
+
+/* Espaçador para empurrar os botões para baixo */
+.cardcurso .prg:last-of-type {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+/* Ícone dentro do título */
+
+
+/* =========================================
+   BOTÕES DO CARD
+   ========================================= */
+.botoes {
+    display: flex;
+    padding: 0 15px 20px 15px;
+    gap: 10px;
+}
+
+.bntcard1, .bntcard2 {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.bntcard1 {
+    border: 2px solid var(--azul-escuro);
+    color: var(--azul-escuro);
+}
+
+.bntcard1:hover {
+    background-color: var(--azul-escuro);
+    color: white;
+}
+
+.bntcard2 {
+    background-color: var(--cor-botao);
+    color: white;
+    border: 2px solid var(--cor-botao);
+}
+
+.bntcard2:hover {
+    background-color: var(--azul-claro);
+    border-color: var(--azul-claro);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 1024px) {
+    .cardcurso {
+        flex-basis: calc((100% - 24px) / 2); /* 2 cards no tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .meu-carrossel {
+        padding: 0 40px;
+    }
+    .cardcurso {
+        flex-basis: 100%; /* 1 card no mobile */
+    }
+    .caixaselecao {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    .caixaselecao span {
+        width: 100%;
+    }
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
