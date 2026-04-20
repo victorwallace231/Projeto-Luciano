@@ -1,5 +1,0 @@
-Organizar a paginas deles
-Minimizar a quantidade de informções
-adicionar uma nav
-uma barra de pesquisa
-ajeitar o footer
