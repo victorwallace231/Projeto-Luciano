@@ -20,9 +20,10 @@ a{
     --titulo-medio: 700 36px "Poppins" , sans-serif;
     --titulo-pequeno:500 24px "Poppins", sans-serif;
     --font-prg: 400 16px "Inter", sans-serif; 
-    --sombra:0 8px 20px rgba(0,0,0,0.3);
+    --sombra:0 8px 20px rgba(0,0,0,0.8);
 }
 .bntdefault{
+    font-family: 'Inter', sans-serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
