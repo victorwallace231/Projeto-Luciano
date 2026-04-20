@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 65px;
+    background-color: #f9f9f9; /* Um fundo leve ajuda a destacar os cards brancos */
+    .titulo-pequeno{
+    color: var(--azul-escuro);
+    }
+    .titulo-medio{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+main .titulo-medio {
+    padding-top: 40px;
+    color: var(--azul-escuro);
+    font-size: 28px; 
+    text-align: center;
+    font-weight: 700;
+}
