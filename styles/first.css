@@ -6,7 +6,7 @@
     height: 100vh;
     background-image: 
     linear-gradient(to right,rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.2) 70%, transparent 100%), 
-    url('/imagens/38eb7b42-2695-46d4-bd80-ca17c15ee48b.png');
+    url('./imagens/38eb7b42-2695-46d4-bd80-ca17c15ee48b.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -45,20 +45,7 @@
     }  
 }
 /* cartões da parte principal*/
-.txt-detalhe{
-    font: 500 18px "Poppins", sans-serif;
-    color: var(--azul-escuro);
-    position: relative;
-    letter-spacing: 3px;
-}
-.txt-detalhe::after{ 
-    content: "";
-  display: block;
-  width: 60px; /* AQUI tu controla o tamanho */
-  height: 3px; /* espessura */
-  background: var(--azul-escuro);
-  margin-top: 8px;
-}
+
 
 
 .cardp{

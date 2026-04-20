@@ -97,6 +97,21 @@ body{
     font-weight: var(--destaque);
 }
 
+.txt-detalhe{
+    font: 500 18px "Poppins", sans-serif;
+    color: var(--azul-escuro);
+    position: relative;
+    letter-spacing: 3px;
+}
+.txt-detalhe::after{ 
+    content: "";
+  display: block;
+  width: 60px; /* AQUI tu controla o tamanho */
+  height: 3px; /* espessura */
+  background: var(--azul-escuro);
+  margin-top: 8px;
+}
+
 .fade-left {/*animação simples pros titulos*/
   opacity: 0;
   transform: translateY(20px);
