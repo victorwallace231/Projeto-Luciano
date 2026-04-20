@@ -98,7 +98,7 @@ body{
     font-weight: var(--destaque);
 }
 
-.txt-detalhe{
+.txt-detalhe{ /*Texto com linha pequena em baixo*/
     font: 500 18px "Poppins", sans-serif;
     color: var(--azul-escuro);
     position: relative;
@@ -106,11 +106,11 @@ body{
 }
 .txt-detalhe::after{ 
     content: "";
-  display: block;
-  width: 60px; /* AQUI tu controla o tamanho */
-  height: 3px; /* espessura */
-  background: var(--azul-escuro);
-  margin-top: 8px;
+    display: block;
+    width: 60px; /* AQUI tu controla o tamanho */
+    height: 3px; /* espessura */
+    background: var(--azul-escuro);
+    margin-top: 8px;
 }
 
 .fade-left {/*animação simples pros titulos*/
@@ -150,7 +150,7 @@ body{
   height: 28px;
   stroke: var(--azul-escuro);
 }
-.icone-boxg{
+.icone-boxg{/*'g' para icones grandes*/
      width: 50px;
      height: 50px;
      display: flex;
@@ -165,7 +165,7 @@ body{
     stroke: var(--white-font);
 }
 
-.icone-boxG{
+.icone-boxG{/*'G' para icones GRANDES*/
      width: 80px;
      height: 80px;
      display: flex;
@@ -238,7 +238,7 @@ body{
         display: none;
     }
     .hamburger {
-        display: flex;
+        display: flex !important;
     }
 
     /* Tipografia reduzida */
