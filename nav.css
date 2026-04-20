@@ -26,8 +26,8 @@
 .bntnav{
     text-decoration: none;
     color: var(--white-font);
-    font-size: 18px;  
-    position: relative;  
+    font-size: 14px;  
+    position: relative;
 }
 .bntnav:hover{
     color: var(--azul-claro);

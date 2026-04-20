@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    font-family:"Inter", sans-serif ;
+}
+
 :root{
     --azul-escuro: #26348B;
     --azul-claro:#3CA4DC;
